@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Gestantes - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link active">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>🤰 Módulo de Gestantes</h2>
+            <p>Acompanhamento pré-natal e gestacional</p>
+        </section>
+
+        <section>
+            <h3>Cadastro de Gestante</h3>
+            <form id="formGestante" class="form-cadastro">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="nomeGestante">Nome da Gestante *</label>
+                        <input type="text" id="nomeGestante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idadeGestante">Idade *</label>
+                        <input type="number" id="idadeGestante" min="10" max="60" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dumGestante">DUM (Data Última Menstruação) *</label>
+                        <input type="date" id="dumGestante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dppGestante">DPP (Data Provável do Parto)</label>
+                        <input type="date" id="dppGestante">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Dados Médicos</h4>
+                <div class="grid-150">
+                    <div class="form-group">
+                        <label for="pesoGestante">Peso (kg)</label>
+                        <input type="number" id="pesoGestante" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="alturaGestante">Altura (cm)</label>
+                        <input type="number" id="alturaGestante" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="paGestante">PA (Pressão Arterial)</label>
+                        <input type="text" id="paGestante" placeholder="Ex: 120/80">
+                    </div>
+                    <div class="form-group">
+                        <label for="glicemiaGestante">Glicemia (mg/dL)</label>
+                        <input type="number" id="glicemiaGestante" step="0.1">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Profissionais Responsáveis</h4>
+                <div class="grid-200">
+                    <div class="form-group">
+                        <label for="acsGestante">Nome do ACS</label>
+                        <input type="text" id="acsGestante">
+                    </div>
+                    <div class="form-group">
+                        <label for="enfermeirasGestante">Nome da Enfermeira</label>
+                        <input type="text" id="enfermeirasGestante">
+                    </div>
+                    <div class="form-group">
+                        <label for="tecnicaGestante">Nome da Técnica</label>
+                        <input type="text" id="tecnicaGestante">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Vacinação</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-dt">
+                        <label for="vac-dt">dT</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-dtpa">
+                        <label for="vac-dtpa">dTpa</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-hepatite">
+                        <label for="vac-hepatite">Hepatite B</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-influenza">
+                        <label for="vac-influenza">Influenza</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-covid">
+                        <label for="vac-covid">COVID-19</label>
+                    </div>
+                </div>
+
+                <div class="form-group margin-top-2rem">
+                    <label for="obsGestante">Observações</label>
+                    <textarea id="obsGestante" placeholder="Anotações adicionais..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar Gestante</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Listagem de Gestantes</h3>
+            <div id="listaGestantes" class="results-list">
+                <p class="text-center-muted">Nenhuma gestante cadastrada ainda.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Histórico de Visitas</h3>
+            <form id="formVisitaGestante" class="margin-bottom-2rem">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="dataVisita">Data da Visita</label>
+                        <input type="date" id="dataVisita">
+                    </div>
+                    <div class="form-group">
+                        <label for="profissionalVisita">Profissional</label>
+                        <input type="text" id="profissionalVisita">
+                    </div>
+                    <div class="form-group">
+                        <label for="obsVisita">Observação</label>
+                        <input type="text" id="obsVisita">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar Visita</button>
+            </form>
+            <div id="historicoVisitas">
+                <p class="text-center-muted">Nenhuma visita registrada.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Módulo Gestantes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

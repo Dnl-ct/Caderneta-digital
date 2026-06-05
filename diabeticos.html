@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Diabéticos - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link active">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>🩸 Módulo de Diabéticos</h2>
+            <p>Acompanhamento de diabetes mellitus</p>
+        </section>
+
+        <section>
+            <h3>Cadastro de Diabético</h3>
+            <form id="formDiabetico" class="form-cadastro">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="nomeDiabetico">Nome *</label>
+                        <input type="text" id="nomeDiabetico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idadeDiabetico">Idade *</label>
+                        <input type="number" id="idadeDiabetico" min="18" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enderecoDiabetico">Endereço</label>
+                        <input type="text" id="enderecoDiabetico">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoneDiabetico">Telefone</label>
+                        <input type="tel" id="telefoneDiabetico">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Controle</h4>
+                <div class="grid-150">
+                    <div class="form-group">
+                        <label for="dataControlDiabetico">Data</label>
+                        <input type="date" id="dataControlDiabetico">
+                    </div>
+                    <div class="form-group">
+                        <label for="pesoDiabetico">Peso (kg)</label>
+                        <input type="number" id="pesoDiabetico" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="alturaDiabetico">Altura (cm)</label>
+                        <input type="number" id="alturaDiabetico" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="paDiabetico">PA (Pressão Arterial)</label>
+                        <input type="text" id="paDiabetico" placeholder="Ex: 120/80">
+                    </div>
+                    <div class="form-group">
+                        <label for="glicemiaDiabetico">Glicemia (mg/dL) *</label>
+                        <input type="number" id="glicemiaDiabetico" step="0.1" required>
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Vacinação</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-influenza-diab">
+                        <label for="vac-influenza-diab">Influenza</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-covid-diab">
+                        <label for="vac-covid-diab">COVID-19</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-hepatite-diab">
+                        <label for="vac-hepatite-diab">Hepatite B</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-outras-diab">
+                        <label for="vac-outras-diab">Outras</label>
+                    </div>
+                </div>
+
+                <div class="form-group margin-top-2rem">
+                    <label for="obsDiabetico">Observações</label>
+                    <textarea id="obsDiabetico" placeholder="Anotações adicionais..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar Diabético</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Listagem de Diabéticos</h3>
+            <div id="listaDiabeticos" class="results-list">
+                <p class="text-center-muted">Nenhum diabético cadastrado ainda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Módulo Diabéticos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

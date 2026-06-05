@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Hipertensos - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link active">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>❤️ Módulo de Hipertensos</h2>
+            <p>Acompanhamento de hipertensão arterial</p>
+        </section>
+
+        <section>
+            <h3>Cadastro de Hipertenso</h3>
+            <form id="formHipertenso" class="form-cadastro">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="nomeHipertenso">Nome *</label>
+                        <input type="text" id="nomeHipertenso" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idadeHipertenso">Idade *</label>
+                        <input type="number" id="idadeHipertenso" min="18" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enderecoHipertenso">Endereço</label>
+                        <input type="text" id="enderecoHipertenso">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoneHipertenso">Telefone</label>
+                        <input type="tel" id="telefoneHipertenso">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Controle</h4>
+                <div class="grid-150">
+                    <div class="form-group">
+                        <label for="dataControlHipertenso">Data</label>
+                        <input type="date" id="dataControlHipertenso">
+                    </div>
+                    <div class="form-group">
+                        <label for="pesoHipertenso">Peso (kg)</label>
+                        <input type="number" id="pesoHipertenso" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="alturaHipertenso">Altura (cm)</label>
+                        <input type="number" id="alturaHipertenso" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="paHipertenso">PA (Pressão Arterial) *</label>
+                        <input type="text" id="paHipertenso" placeholder="Ex: 140/90" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="glicemiaHipertenso">Glicemia (mg/dL)</label>
+                        <input type="number" id="glicemiaHipertenso" step="0.1">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Acompanhamentos</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-acs-hip">
+                        <label for="acomp-acs-hip">ACS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-enfermeira-hip">
+                        <label for="acomp-enfermeira-hip">Enfermeira</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-tecnica-hip">
+                        <label for="acomp-tecnica-hip">Técnica</label>
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Vacinação</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-influenza-hip">
+                        <label for="vac-influenza-hip">Influenza</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-covid-hip">
+                        <label for="vac-covid-hip">COVID-19</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-outras-hip">
+                        <label for="vac-outras-hip">Outras</label>
+                    </div>
+                </div>
+
+                <div class="form-group margin-top-2rem">
+                    <label for="obsHipertenso">Observações</label>
+                    <textarea id="obsHipertenso" placeholder="Anotações adicionais..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar Hipertenso</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Listagem de Hipertensos</h3>
+            <div id="listaHipertensos" class="results-list">
+                <p class="text-center-muted">Nenhum hipertenso cadastrado ainda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Módulo Hipertensos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

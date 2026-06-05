@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Bem-vindo à Caderneta Digital do ACS</h2>
+            <p>Sistema integrado para acompanhamento de pacientes na atenção primária à saúde</p>
+        </section>
+
+        <section class="dashboard">
+            <h3>Dashboard Rápido</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🤰</div>
+                    <h4>Gestantes</h4>
+                    <p class="stat-number" id="count-gestantes">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👶</div>
+                    <h4>Crianças</h4>
+                    <p class="stat-number" id="count-criancas">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <h4>Hipertensos</h4>
+                    <p class="stat-number" id="count-hipertensos">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🩸</div>
+                    <h4>Diabéticos</h4>
+                    <p class="stat-number" id="count-diabeticos">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👵</div>
+                    <h4>Idosos</h4>
+                    <p class="stat-number" id="count-idosos">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-actions">
+            <h3>Ações Rápidas</h3>
+            <div class="action-buttons">
+                <a href="gestantes.html" class="btn btn-primary">+ Adicionar Gestante</a>
+                <a href="criancas.html" class="btn btn-primary">+ Adicionar Criança</a>
+                <a href="pesquisa.html" class="btn btn-secondary">🔍 Pesquisar Paciente</a>
+                <a href="relatorios.html" class="btn btn-secondary">📊 Ver Relatórios</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

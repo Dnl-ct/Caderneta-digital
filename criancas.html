@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Crianças - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link active">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>👶 Módulo de Crianças</h2>
+            <p>Acompanhamento de crescimento e desenvolvimento</p>
+        </section>
+
+        <section>
+            <h3>Cadastro de Criança</h3>
+            <form id="formCrianca" class="form-cadastro">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="nomeCrianca">Nome da Criança *</label>
+                        <input type="text" id="nomeCrianca" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascCrianca">Data de Nascimento *</label>
+                        <input type="date" id="dataNascCrianca" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeMae">Nome da Mãe *</label>
+                        <input type="text" id="nomeMae" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="microarea">Microárea</label>
+                        <input type="text" id="microarea">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Antropometria</h4>
+                <div class="grid-150">
+                    <div class="form-group">
+                        <label for="dataMedicao">Data</label>
+                        <input type="date" id="dataMedicao">
+                    </div>
+                    <div class="form-group">
+                        <label for="pesoCrianca">Peso (kg)</label>
+                        <input type="number" id="pesoCrianca" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="alturaCrianca">Altura (cm)</label>
+                        <input type="number" id="alturaCrianca" step="0.1">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Vacinação</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-bcg">
+                        <label for="vac-bcg">BCG</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-hepb">
+                        <label for="vac-hepb">Hepatite B</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-pentavalente">
+                        <label for="vac-pentavalente">Pentavalente</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-vip">
+                        <label for="vac-vip">VIP</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-rotavirus">
+                        <label for="vac-rotavirus">Rotavírus</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-pneumococica">
+                        <label for="vac-pneumococica">Pneumocócica</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-triviral">
+                        <label for="vac-triviral">Tríplice Viral</label>
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Acompanhamentos</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-acs">
+                        <label for="acomp-acs">ACS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-enfermeira">
+                        <label for="acomp-enfermeira">Enfermeira</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-tecnica">
+                        <label for="acomp-tecnica">Técnica de Enfermagem</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-dentista">
+                        <label for="acomp-dentista">Dentista</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-nutricionista">
+                        <label for="acomp-nutricionista">Nutricionista</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-fonoaudiologo">
+                        <label for="acomp-fonoaudiologo">Fonoaudiólogo</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-terapeuta">
+                        <label for="acomp-terapeuta">Terapeuta Ocupacional</label>
+                    </div>
+                </div>
+
+                <div class="form-group margin-top-2rem">
+                    <label for="obsCrianca">Observações</label>
+                    <textarea id="obsCrianca" placeholder="Anotações adicionais..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar Criança</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Listagem de Crianças</h3>
+            <div id="listaCriancas" class="results-list">
+                <p class="text-center-muted">Nenhuma criança cadastrada ainda.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Histórico de Consultas</h3>
+            <form id="formConsultaCrianca" class="margin-bottom-2rem">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="dataConsulta">Data</label>
+                        <input type="date" id="dataConsulta">
+                    </div>
+                    <div class="form-group">
+                        <label for="profissionalConsulta">Profissional</label>
+                        <input type="text" id="profissionalConsulta">
+                    </div>
+                    <div class="form-group">
+                        <label for="obsConsulta">Observação</label>
+                        <input type="text" id="obsConsulta">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar Consulta</button>
+            </form>
+            <div id="historicoConsultas">
+                <p class="text-center-muted">Nenhuma consulta registrada.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Módulo Crianças</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link active">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>🔍 Pesquisa de Pacientes</h2>
+            <p>Busque rapidamente um paciente na caderneta</p>
+        </section>
+
+        <section>
+            <h3>Buscar Paciente</h3>
+            <form id="formPesquisa" class="search-form">
+                <div class="form-grid">
+                    <div class="form-group form-no-margin">
+                        <input type="text" id="busca-nome" class="input-full" placeholder="Digite o nome ou parte do nome...">
+                    </div>
+                    <div class="form-group form-no-margin">
+                        <select id="tipo-paciente" class="input-full">
+                            <option value="">Todos os tipos</option>
+                            <option value="gestante">Gestantes</option>
+                            <option value="crianca">Crianças</option>
+                            <option value="hipertenso">Hipertensos</option>
+                            <option value="diabetico">Diabéticos</option>
+                            <option value="idoso">Idosos</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">🔍 Pesquisar</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Resultados da Pesquisa</h3>
+            <div id="resultadosPesquisa" class="resultados-pesquisa">
+                <p class="pesquisa-placeholder">Digite um nome e clique em pesquisar.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Filtros Avançados</h3>
+            <form id="formFiltroAvancado" class="advanced-filter-form">
+                <div class="advanced-filters-grid">
+                    <div class="form-group">
+                        <label for="filtro-faixa-etaria">Faixa Etária</label>
+                        <select id="filtro-faixa-etaria">
+                            <option value="">Todas</option>
+                            <option value="0-10">0-10 anos</option>
+                            <option value="11-20">11-20 anos</option>
+                            <option value="21-30">21-30 anos</option>
+                            <option value="31-40">31-40 anos</option>
+                            <option value="41-50">41-50 anos</option>
+                            <option value="51-60">51-60 anos</option>
+                            <option value="60+">60+ anos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="filtro-microarea">Microárea</label>
+                        <input type="text" id="filtro-microarea" placeholder="Digite a microárea...">
+                    </div>
+                    <div class="form-group">
+                        <label for="filtro-status-vacina">Status de Vacinação</label>
+                        <select id="filtro-status-vacina">
+                            <option value="">Todos</option>
+                            <option value="atualizado">Atualizado</option>
+                            <option value="pendente">Pendente</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Filtros</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Pesquisa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link active">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>📊 Relatórios</h2>
+            <p>Resumo estatístico e análise de dados da caderneta</p>
+        </section>
+
+        <section>
+            <h3>Estatísticas Gerais</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🤰</div>
+                    <h4>Total de Gestantes</h4>
+                    <p class="stat-number" id="total-gestantes">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👶</div>
+                    <h4>Total de Crianças</h4>
+                    <p class="stat-number" id="total-criancas">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <h4>Total de Hipertensos</h4>
+                    <p class="stat-number" id="total-hipertensos">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🩸</div>
+                    <h4>Total de Diabéticos</h4>
+                    <p class="stat-number" id="total-diabeticos">0</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👵</div>
+                    <h4>Total de Idosos</h4>
+                    <p class="stat-number" id="total-idosos">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Resumo de Atividades</h3>
+            <div class="grid-250">
+                <div class="stat-card">
+                    <h4>Visitas Realizadas</h4>
+                    <p class="stat-number" id="total-visitas">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Pacientes sem Visita</h4>
+                    <p class="stat-number" id="pacientes-sem-visita">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Vacinas Pendentes</h4>
+                    <p class="stat-number" id="vacinas-pendentes">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Opções de Exportação</h3>
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="btn-exportar-pdf">📄 Exportar PDF</button>
+                <button class="btn btn-primary" id="btn-exportar-excel">📊 Exportar Excel</button>
+                <button class="btn btn-secondary" id="btn-imprimir">🖨️ Imprimir</button>
+            </div>
+        </section>
+
+        <section>
+            <h3>Relatório Detalhado</h3>
+            <div id="relatorioDetalhado">
+                <p class="text-center-muted">Nenhum dado para exibir.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Relatórios</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

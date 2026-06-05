@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Idosos - Caderneta Digital ACS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🏥</div>
+                <h1>CADERNETA DIGITAL ACS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">🏠 Inicial</a>
+                <a href="gestantes.html" class="nav-link">🤰 Gestantes</a>
+                <a href="criancas.html" class="nav-link">👶 Crianças</a>
+                <a href="hipertensos.html" class="nav-link">❤️ Hipertensos</a>
+                <a href="diabeticos.html" class="nav-link">🩸 Diabéticos</a>
+                <a href="idosos.html" class="nav-link active">👵 Idosos</a>
+                <a href="relatorios.html" class="nav-link">📊 Relatórios</a>
+                <a href="pesquisa.html" class="nav-link">🔍 Pesquisa</a>
+                <a href="configuracoes.html" class="nav-link">⚙️ Config</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>👵 Módulo de Idosos</h2>
+            <p>Acompanhamento integral do idoso</p>
+        </section>
+
+        <section>
+            <h3>Cadastro de Idoso</h3>
+            <form id="formIdoso" class="form-cadastro">
+                <div class="grid-250">
+                    <div class="form-group">
+                        <label for="nomeIdoso">Nome *</label>
+                        <input type="text" id="nomeIdoso" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascIdoso">Data de Nascimento *</label>
+                        <input type="date" id="dataNascIdoso" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="enderecoIdoso">Endereço</label>
+                        <input type="text" id="enderecoIdoso">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefoneIdoso">Telefone</label>
+                        <input type="tel" id="telefoneIdoso">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Controle</h4>
+                <div class="grid-150">
+                    <div class="form-group">
+                        <label for="dataControlIdoso">Data</label>
+                        <input type="date" id="dataControlIdoso">
+                    </div>
+                    <div class="form-group">
+                        <label for="pesoIdoso">Peso (kg)</label>
+                        <input type="number" id="pesoIdoso" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="alturaIdoso">Altura (cm)</label>
+                        <input type="number" id="alturaIdoso" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="paIdoso">PA (Pressão Arterial)</label>
+                        <input type="text" id="paIdoso" placeholder="Ex: 120/80">
+                    </div>
+                    <div class="form-group">
+                        <label for="glicemiaIdoso">Glicemia (mg/dL)</label>
+                        <input type="number" id="glicemiaIdoso" step="0.1">
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Vacinação</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-influenza-idoso">
+                        <label for="vac-influenza-idoso">Influenza</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-covid-idoso">
+                        <label for="vac-covid-idoso">COVID-19</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-pneumococica-idoso">
+                        <label for="vac-pneumococica-idoso">Pneumocócica</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="vac-outras-idoso">
+                        <label for="vac-outras-idoso">Outras</label>
+                    </div>
+                </div>
+
+                <h4 class="section-subtitle">Acompanhamentos</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-acs-idoso">
+                        <label for="acomp-acs-idoso">ACS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-enfermeira-idoso">
+                        <label for="acomp-enfermeira-idoso">Enfermeira</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-tecnica-idoso">
+                        <label for="acomp-tecnica-idoso">Técnica</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-dentista-idoso">
+                        <label for="acomp-dentista-idoso">Dentista</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-nutricionista-idoso">
+                        <label for="acomp-nutricionista-idoso">Nutricionista</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-fonoaudiologo-idoso">
+                        <label for="acomp-fonoaudiologo-idoso">Fonoaudiólogo</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="acomp-terapeuta-idoso">
+                        <label for="acomp-terapeuta-idoso">Terapeuta Ocupacional</label>
+                    </div>
+                </div>
+
+                <div class="form-group margin-top-2rem">
+                    <label for="obsIdoso">Observações</label>
+                    <textarea id="obsIdoso" placeholder="Anotações adicionais..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar Idoso</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h3>Listagem de Idosos</h3>
+            <div id="listaIdosos" class="results-list">
+                <p class="empty-state">Nenhum idoso cadastrado ainda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Caderneta Digital ACS - Módulo Idosos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
